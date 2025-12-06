@@ -1,4 +1,4 @@
-# 🌐 Network Monitor Pro (网络监控专业版)
+# 🌐 IP-Detect-public-IP-address (本地实时获取当前网络的公网IP)
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
