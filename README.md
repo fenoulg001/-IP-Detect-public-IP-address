@@ -1,4 +1,4 @@
-# 🌐 IP-Detect-public-IP-address (本地实时获取当前网络的公网IP)
+# 🌐 本地实时获取当前网络的公网IP-无缓存-支持代理模式-自动刷新
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
