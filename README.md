@@ -18,7 +18,7 @@
 
 ## 📖 项目简介
 
-**Network Monitor Pro** 是一个基于 Python `CustomTkinter` 开发的桌面端网络监控工具。
+**本地实时获取当前网络的公网IP** 是一个基于 Python `CustomTkinter` 开发的桌面端网络监控工具。
 
 与传统的 IP 查询网页不同，本项目旨在解决“**开了代理不知道自己 IP 到底在哪**”以及“**网页查询有缓存不准确**”的痛点。它通过 HTTP/HTTPS 请求穿透您的代理服务器（Clash, v2ray 等），结合 **本地 MaxMind 离线数据库**，实现毫秒级的 IP 归属地、运营商 (ISP) 及 ASN 信息查询。
 
