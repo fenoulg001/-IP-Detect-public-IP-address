@@ -42,8 +42,16 @@
 # 1. 克隆仓库
 git clone [https://github.com/你的用户名/NetworkMonitor.git](https://github.com/你的用户名/NetworkMonitor.git)
 
-# 2. 进入目录
-cd NetworkMonitor
+配置数据库 (⚠️ 非常重要)
+由于 MaxMind 许可协议限制，本项目 不包含 .mmdb 数据库文件，您需要手动下载并放入项目根目录：
 
-# 3. 安装依赖
-pip install -r requirements.txt
+下载 GeoLite2-City.mmdb 和 GeoLite2-ASN.mmdb。
+
+官方地址：MaxMind 官网
+
+替代方案：在 GitHub 搜索关键字 "GeoLite2-City.mmdb download"
+
+将这两个文件放入项目根目录下。
+
+注意：文件名必须完全一致，分别为 GeoLite2-City.mmdb 和 GeoLite2-ASN.mmdb。
+
