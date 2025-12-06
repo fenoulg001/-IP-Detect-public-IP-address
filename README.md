@@ -38,3 +38,49 @@
 ```bash
 git clone [https://github.com/你的用户名/NetworkMonitor.git](https://github.com/你的用户名/NetworkMonitor.git)
 cd NetworkMonitor
+2. 安装依赖
+Bash
+
+pip install -r requirements.txt
+3. 配置数据库 (⚠️ 重要)
+由于 MaxMind 许可协议限制，本项目不包含 .mmdb 数据库文件，您需要手动下载并放入项目根目录：
+
+下载 GeoLite2-City.mmdb 和 GeoLite2-ASN.mmdb。
+
+官方地址：MaxMind 官网
+
+或在 GitHub 搜索关键字："GeoLite2-City.mmdb download"
+
+确保这两个文件位于项目根目录下，文件名必须完全一致。
+
+4. 代理设置 (可选)
+打开 NetworkMonitor_Proxy.py 文件，顶部配置区域可修改代理：
+
+Python
+
+# 留空 {} 则自动读取系统代理 (如 VPN 全局模式/Clash Tun模式)
+PROXIES = {} 
+
+# 如果您只开启了代理软件但没开TUN，需要指定端口 (例如 Clash 默认 7890)
+# PROXIES = {
+#     "http":  "[http://127.0.0.1:7890](http://127.0.0.1:7890)",
+#     "https": "[http://127.0.0.1:7890](http://127.0.0.1:7890)",
+# }
+5. 启动运行
+Bash
+
+python NetworkMonitor_Proxy.py
+📦 打包为 EXE (Windows)
+如果您想制作一个发给朋友即开即用的 .exe 程序，请在终端执行以下命令（需要安装 PyInstaller）：
+
+PowerShell
+
+pyinstaller --noconfirm --onefile --windowed --clean --name "NetworkMonitor" --collect-all customtkinter --add-data "GeoLite2-ASN.mmdb;." --add-data "GeoLite2-City.mmdb;." "NetworkMonitor_Proxy.py"
+打包成功后，可执行文件位于 dist 文件夹内。
+
+📜 致谢与许可
+本项目使用了 MaxMind 创建的 GeoLite2 数据，可从 https://www.maxmind.com 获取。
+
+UI 框架: CustomTkinter
+
+开源协议: MIT License
